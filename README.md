@@ -130,57 +130,80 @@ body, html {
 **Expected Outcome:** An image and text centered in the left column of the card.
 
 ---
+Absolutely! We can break it down even further.
 
-## Step 4: Add Forms
-4.1 In the second column of the `card` `div`, add another `div` with a class of `form`. Inside the `form` `div`, add two `form` elements, one for registration and another for login.
+---
+
+**Step 4: Add Forms**
+
+**4.1 Adding the Form Structure**
+
+Start by adding two forms inside the `form` `div`, one for registration and another for login.
 
 ```html
 <div class="card">
   <div class="column form">
     <form action="">
       <h2>Register</h2>
-      <div class="input-container">
-        <i class="fas fa-user"></i>
-        <input type="text" placeholder="Name" />
-      </div>
-      <div class="input-container">
-        <i class="fas fa-envelope"></i>
-        <input type="email" placeholder="Email" />
-      </div>
-      <div class="input-container">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" />
-      </div>
-      <button type="submit">Register</button>
+      <!-- ... rest of the form -->
     </form>
     <form action="">
       <h2>Login</h2>
-      <div class="input-container">
-        <i class="fas fa-envelope"></i>
-        <input type="email" placeholder="Email" />
-      </div>
-      <div class="input-container">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" />
-      </div>
-      <button type="submit">Login</button>
+      <!-- ... rest of the form -->
     </form>
   </div>
 </div>
 ```
 
-4.2 Add the following CSS to style the `form` column and its components.
+**Explanation:** Each form starts with an `h2` element for the form title, followed by a series of `div` elements with a class of `input-container`, each containing an `i` element for the icon, and an `input` element for the user input.
+
+**Expected Outcome:** Two forms with titles but no input fields or buttons yet.
+
+---
+
+**4.2 Styling the Form Titles**
+
+Next, let's style the form titles.
 
 ```css
-.form {
-  display: grid;
-}
-
 .form h2 {
   margin-bottom: 20px;
   color: #333;
 }
+```
 
+**Explanation:** The `margin-bottom: 20px;` adds some space below the titles, and `color: #333;` sets the color of the titles to a dark grey.
+
+**Expected Outcome:** The titles of the forms should now have some space below them and be colored dark grey.
+
+---
+
+**4.3 Adding Input Fields**
+
+Now, let's add the input fields inside the `input-container` `div`s.
+
+```html
+<form action="">
+  <h2>Register</h2>
+  <div class="input-container">
+    <i class="fas fa-user"></i>
+    <input type="text" placeholder="Name" />
+  </div>
+  <!-- ... rest of the input fields and button -->
+</form>
+```
+
+**Explanation:** Each `input-container` `div` contains an `i` element for the icon, and an `input` element for the user input.
+
+**Expected Outcome:** The forms should now have input fields with icons, but no styling yet.
+
+---
+
+**4.4 Styling the Input Fields**
+
+Next, let's style the `input-container` `div`s and the `input` elements inside them.
+
+```css
 .form .input-container {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -188,9 +211,7 @@ body, html {
   width: 100%;
   margin-bottom: 10px;
   border: 1px solid #0eb1d2;
- 
-
- border-radius: 10px;
+  border-radius: 10px;
   outline: none;
 }
 
@@ -210,7 +231,46 @@ body, html {
   border-radius: 10px;
   outline: none;
 }
+```
 
+**Explanation:** 
+- The `display: grid;`, `grid-template-columns: auto 1fr;`, and `gap: 10px;` styles make the `input-container` `div`s grid containers, with two columns, the first one as wide as its content and the second one taking up the remaining space, and a 10px gap between them.
+- The `width: 100%;`, `margin-bottom: 10px;`, `border: 1px solid #0eb1d2;`, `border-radius: 10px;`, and `outline: none;` styles set the width, margin, border, and outline of the `input-container` `div`s.
+- The `border-color: #333;` style changes the border color of the `input-container` `div`s when they are focused.
+- The `padding: 15px;` and `color: #0eb1d2;` styles set the padding and color of the `i` elements.
+- The `width: 100%;`, `padding: 15px;`, `border: none;`, `border-radius: 10px;`, and `outline: none;` styles set the width, padding, border, and outline of the `input` elements.
+
+**Expected Outcome:** The forms should now have styled input fields with icons.
+
+---
+
+**4.5 Adding Buttons**
+
+Now, let's add the buttons below the input fields.
+
+```html
+<form action="">
+  <h2>Register</h2>
+  <div class="input-container">
+    <i class="fas fa-user"></i>
+    <input type="text" placeholder="Name" />
+  </div>
+  <!-- ... rest of the input fields -->
+  <button type="submit">Register</button>
+</form>
+```
+
+**Explanation:** Each form ends with a `button` element for submitting the form.
+
+**Expected Outcome:** The forms should now have buttons below the input fields, but with no styling yet.
+
+---
+
+**4.6 Styling the Buttons**
+
+Finally, let's style the buttons.
+
+```css
 .form button {
   width: 100%;
   padding: 15px;
@@ -228,18 +288,12 @@ body, html {
 ```
 
 **Explanation:** 
-- `display: grid;` makes the `form` div a grid container.
-- `margin-bottom: 20px;` and `color: #333;` add space below the headings and set their color.
-- `display: grid;`, `grid-template-columns: auto 1fr;`, `gap: 10px;`, `width: 100%;`, `margin-bottom: 10px;`, `border: 1px solid #0eb1d2;`, `border-radius: 10px;`, and `outline: none;` style the `input-container` divs.
-- `border-color: #333;` changes the border color of the `input-container` when it is focused.
-- `padding: 15px;`, `color: #0eb1d2;`, `width: 100%;`, `padding: 15px;`, `border: none;`, `border-radius: 10px;`, and `outline: none;` style the `input` elements and the `i` elements inside the `input-container` divs.
-- `width: 100%;`, `padding: 15px;`, `border: none;`, `border-radius: 10px;`, `background-color: #0eb1d2;`, `color: white;`, `font-weight: 500;`, and `cursor: pointer;` style the `button` elements.
-- `background-color: #333;` changes the background color of the buttons when they are hovered over.
+- The `width: 100%;`, `padding: 15px;`, `border: none;`, `border-radius: 10px;`, `background-color: #0eb1d2;`, `color: white;`, `font-weight: 500;`, and `cursor: pointer;` styles set the width, padding, border, background color, text color, font weight, and cursor of the buttons.
+- The `background-color: #333;` style changes the background color of the buttons when they are hovered over.
 
-**Expected Outcome:** Two forms with input fields and buttons in the right column of the card.
+**Expected Outcome:** The forms should now have styled buttons below the input fields.
 
 ---
 
-## Conclusion
+And that's it! Your forms should now be fully styled and ready for use.
 
-You have successfully created a Registration & Login form using HTML and CSS Grid! Feel free to customize the design and add any additional features you like.
