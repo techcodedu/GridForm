@@ -1,6 +1,7 @@
 # GridForm
 
 ## Registration & Login Form Using CSS Grid
+![Result Image](https://github.com/techcodedu/GridForm/blob/main/result.jpg)
 
 ## Prerequisites
 - Basic knowledge of HTML and CSS.
