@@ -296,5 +296,5 @@ Finally, let's style the buttons.
 
 ---
 
-And that's it! Your forms should now be fully styled and ready for use.
+
 
