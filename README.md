@@ -130,10 +130,6 @@ body, html {
 
 **Expected Outcome:** An image and text centered in the left column of the card.
 
----
-Absolutely! We can break it down even further.
-
----
 
 **Step 4: Add Forms**
 
